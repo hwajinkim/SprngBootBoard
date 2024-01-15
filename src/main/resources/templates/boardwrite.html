@@ -6,11 +6,16 @@
 </head>
 <body>
 <div class="layout">
-    <form action="/board/writedo" method="post">
-        <label for="exampleFormControlInput1" class="form-label">Name</label>
-        <input id="exampleFormControlInput1" name="title"  type="text"><br>
-        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label><br>
-        <textarea id="exampleFormControlTextarea1" name="content"></textarea>
+    <form action="/board/writedo" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input id="exampleFormControlInput1" name="title"  type="text"><br>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label><br>
+            <textarea id="exampleFormControlTextarea1" name="content"></textarea>
+        </div>
+        <input type="file" name="file">
         <button type="submit">작성</button>
     </form>
 </div>
